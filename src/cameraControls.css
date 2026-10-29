@@ -1,0 +1,118 @@
+.drone-camera-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.drone-camera-controls__identity {
+  flex-basis: 100%;
+  overflow-wrap: anywhere;
+}
+.drone-camera-controls__group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+}
+.drone-camera-controls__gimbal {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px;
+  grid-template-areas: "roll ." "preview pitch" "yaw .";
+  align-items: stretch;
+  gap: 6px;
+  flex: 1 1 100%;
+  min-width: 0;
+}
+.drone-camera-controls__preview {
+  grid-area: preview;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+.drone-camera-controls__preview--absent {
+  justify-content: center;
+  min-height: 180px;
+  border-radius: 8px;
+  background: rgb(128 128 128 / .08);
+  font-size: .8em;
+}
+.drone-camera-controls__axis {
+  width: 100%;
+  min-width: 0;
+  gap: 3px;
+  padding: 5px;
+}
+.drone-camera-controls__axis--roll { grid-area: roll; }
+.drone-camera-controls__axis--yaw { grid-area: yaw; }
+.drone-camera-controls__axis--pitch { grid-area: pitch; }
+.drone-camera-controls__axis > span {
+  font-size: .8em;
+}
+.drone-camera-controls__axis-inputs {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  min-width: 0;
+  gap: 2px;
+}
+.drone-camera-controls__axis-inputs > button,
+.drone-camera-controls__axis-inputs .foss-earth-help-button {
+  flex-shrink: 0;
+}
+.drone-camera-controls__axis-inputs input[type="range"] {
+  flex: 1 1 0;
+  width: 0;
+  min-width: 0;
+  margin: 0;
+}
+.drone-camera-controls__axis--pitch {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.drone-camera-controls__axis--pitch .drone-camera-controls__axis-inputs {
+  flex-direction: column;
+  min-height: 160px;
+}
+.drone-camera-controls__axis--pitch input[type="range"] {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  width: 22px;
+  min-height: 64px;
+}
+.drone-camera-controls__axis--pitch .drone-camera-controls__angles {
+  font-size: .6em;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.drone-camera-controls__angles {
+  font-size: .72em;
+  font-variant-numeric: tabular-nums;
+}
+.drone-camera-controls .drone-camera-controls__command {
+  width: auto;
+  gap: 5px;
+  padding-inline: 7px;
+  white-space: nowrap;
+}
+.drone-camera-controls__status,
+.drone-camera-controls__hint,
+.drone-camera-controls__error {
+  flex-basis: 100%;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.drone-camera-controls__hint {
+  font-size: .85em;
+  opacity: .8;
+}
+.drone-camera-controls__error {
+  color: var(--foss-earth-error, #fca5a5);
+}
+.drone-camera-controls progress {
+  flex: 1 1 100%;
+  max-width: 100%;
+  height: 6px;
+}

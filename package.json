@@ -1,0 +1,64 @@
+{
+  "name": "@0sfs/drone-camera",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "exports": {
+    "./sensorFrame": {
+      "source": "./src/sensorFrame.ts",
+      "default": "./src/sensorFrame.ts"
+    },
+    "./captureFrame": {
+      "source": "./src/captureFrame.ts",
+      "default": "./src/captureFrame.ts"
+    },
+    "./captureSequence": {
+      "source": "./src/captureSequence.ts",
+      "default": "./src/captureSequence.ts"
+    },
+    "./jpegExif": {
+      "source": "./src/jpegExif.ts",
+      "default": "./src/jpegExif.ts"
+    },
+    "./zipStore": {
+      "source": "./src/zipStore.ts",
+      "default": "./src/zipStore.ts"
+    },
+    "./opticalFlow": {
+      "source": "./src/opticalFlow.ts",
+      "default": "./src/opticalFlow.ts"
+    },
+    "./flowEstimator": {
+      "source": "./src/flowEstimator.ts",
+      "default": "./src/flowEstimator.ts"
+    },
+    "./flowWgsl": {
+      "source": "./src/flowWgsl.ts",
+      "default": "./src/flowWgsl.ts"
+    },
+    "./sphericalGrid": {
+      "source": "./src/sphericalGrid.ts",
+      "default": "./src/sphericalGrid.ts"
+    },
+    "./profile": {
+      "source": "./src/profile.ts",
+      "default": "./src/profile.ts"
+    },
+    "./manifest": "./public/0sfs-mod.json",
+    "./cameraControls": {
+      "source": "./src/cameraControls.ts",
+      "default": "./src/cameraControls.ts"
+    }
+  },
+  "peerDependencies": {
+    "@babylonjs/core": "8.56.2",
+    "jpeg-js": "0.4.4",
+    "@foss-earth/ui": "0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@foss-earth/ui": {
+      "optional": true
+    }
+  }
+}
