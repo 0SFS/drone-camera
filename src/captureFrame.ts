@@ -1,4 +1,3 @@
-/// <reference path="./jpeg-js.d.ts" />
 import type { AbstractMesh, Scene, UniversalCamera } from "@babylonjs/core";
 import { insertJpegMetadata, type JpegShotMeta } from "./jpegExif";
 import type { CameraProfile } from "./profile";

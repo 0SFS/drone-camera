@@ -15,3 +15,5 @@ The optional Roll/Yaw controls use the same bounded-axis UI as Pitch: host-suppl
 The optional `0SFS/camera-preview` display is a separate mod/repository. `cameraControls` accepts a host-owned preview element and imports no preview implementation. Preview providers consume the versioned `@0sfs/mods/cameraPreview` contract, so the host does not depend on a particular display package. Sensor selection remains the airframe's `quad.cameraId` and camera-model dependency.
 
 The panel surrounds that central preview with Roll above, Yaw below and vertical Pitch on the right. The host may bind shared 360-viewer gestures to a provider canvas. `SensorPreviewRig.read` accepts an optional narrower vertical FOV for preview magnification; rendering restores the shared camera's lens/projection before asynchronous readback, so still capture retains its native sensor view.
+
+Topics: `0sfs-mod` and `0sfs-component-mod`. [Modding guide](https://github.com/0SFS/docs/blob/main/modding.md) describes discovery and installation.
